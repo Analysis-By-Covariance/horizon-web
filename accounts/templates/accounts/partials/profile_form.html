@@ -1,0 +1,6 @@
+<form id="profile-form" method="post" action="{% url 'profile' %}"
+      hx-post="{% url 'profile' %}" hx-target="#profile-form" hx-swap="outerHTML">
+  {% csrf_token %}
+  {{ form.as_div }}
+  <button type="submit">Save</button>
+</form>

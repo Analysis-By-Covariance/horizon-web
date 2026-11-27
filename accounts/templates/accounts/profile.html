@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block head_title %}Profile{% endblock %}
+{% block content %}
+  <h1>Your profile</h1>
+  <p>{{ user.username }} · {{ user.email }}</p>
+  <p><a href="{% url 'socialaccount_connections' %}">Connected accounts</a> ·
+     <a href="{% url 'account_change_password' %}">Change password</a></p>
+  {% include "accounts/partials/profile_form.html" %}
+{% endblock %}
