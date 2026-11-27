@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Horizon</h1>
+  {% if user.is_authenticated %}<p>Signed in as {{ user }}.</p>{% endif %}
+{% endblock %}
